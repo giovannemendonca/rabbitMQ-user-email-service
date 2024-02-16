@@ -1,0 +1,25 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/ms_labs
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        #ddl-auto: update
+
+  rabbitmq:
+    addresses: amqps://esjxiuov:8L1jwtv7-tCUH9y9PylLkO88HmNDXluh@shrimp.rmq.cloudamqp.com/esjxiuov
+
+broker:
+  queue:
+    email:
+      name: default.email
+
+
+server:
+  port: 8081
